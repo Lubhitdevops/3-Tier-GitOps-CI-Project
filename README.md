@@ -1,9 +1,3 @@
-Perfect 👍 — here’s your **final, complete `README.md`** for the **Node.js GitOps CI/CD Project**, now including:
-✅ *Technologies Used*
-✅ *Acknowledgments*
-✅ *License Section*
-✅ *Clean formatting for GitHub display*
-
 ---
 
 # 🚀 Node.js CI – GitOps Workflow with Argo CD
