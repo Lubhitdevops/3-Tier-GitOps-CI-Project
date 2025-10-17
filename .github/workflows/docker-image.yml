@@ -92,8 +92,8 @@ jobs:
           file: ./api/Dockerfile
           push: true
           tags: |
-            adijaiswal/backend:latest
-            adijaiswal/backend:${{ env.IMAGE_TAG }}
+            lubhitdocker/actions-backend:latest
+            lubhitdocker/actions-backend:${{ env.IMAGE_TAG }}
 
   build_frontend_docker_image_and_push:
     runs-on: ubuntu-latest
