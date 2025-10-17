@@ -121,8 +121,8 @@ jobs:
           file: ./client/Dockerfile
           push: true
           tags: |
-            adijaiswal/frontend:latest
-            adijaiswal/frontend:${{ env.IMAGE_TAG }}
+            lubhitdocker/actions-frontend:latest
+            lubhitdocker/actions-frontend:${{ env.IMAGE_TAG }}
 
   trivy_image_scan:
     runs-on: ubuntu-latest
@@ -137,7 +137,7 @@ jobs:
         uses: aquasecurity/trivy-action@0.28.0
         with:
           scan-type: image
-          image-ref: adijaiswal/backend:${{ env.IMAGE_TAG }}
+          image-ref: lubhitdocker/actions-backend:${{ env.IMAGE_TAG }}
           format: table
           exit-code: '0'                 # set to '1' to fail on vulns
           ignore-unfixed: true
@@ -148,7 +148,7 @@ jobs:
         uses: aquasecurity/trivy-action@0.28.0
         with:
           scan-type: image
-          image-ref: adijaiswal/frontend:${{ env.IMAGE_TAG }}
+          image-ref: lubhitdocker/actions-frontend:${{ env.IMAGE_TAG }}
           format: table
           exit-code: '0'
           ignore-unfixed: true
@@ -162,7 +162,7 @@ jobs:
       - name: Checkout CD repo
         uses: actions/checkout@v4
         with:
-          repository: jaiswaladi246/3-Tier-GitOps-CD
+          repository: Lubhitdevops/3-Tier-GitOps-CD-Project
           ref: main
           token: ${{ secrets.CD_REPO_TOKEN }}
           path: cd
